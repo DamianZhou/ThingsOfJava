@@ -3,6 +3,12 @@ package com.demo.struct;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * 队列Queue的demo
+ * 
+ * @author DamianZhou
+ *
+ */
 public class TestQueue {
 
 	public static void main(String[] args) {
