@@ -20,11 +20,10 @@ public class P189_Rotate_Array {
 
 	public static void main(String[] args) {
 
-		int[] nums = {1,2,3,4,5,6,7,8,9};
+//		int[] nums = {1,2,3,4,5,6,7,8,9};
+		int[] nums={1,2,3,4,5,6,7}; 
 
-		printArray(nums);
-		rotate2(nums,18);
-		printArray(nums);
+		rotate3(nums,3);
 
 
 	}
@@ -55,6 +54,7 @@ public class P189_Rotate_Array {
 	 * @param nums
 	 * @param k
 	 */
+	@Deprecated
 	public static void rotate2(int[] nums, int k) {
 		int i=0;
 		int len=nums.length;
@@ -69,6 +69,34 @@ public class P189_Rotate_Array {
 		}
 	}
 
+	
+	/*
+	 * 参考编程之美
+	 * 空间换取时间
+	 * 
+	 */
+	public static void rotate3(int[] nums, int k) {
+		int i=0;
+		int len=nums.length;
+		k=k%len;
+		int jump=len-k;
+		
+		int[] list = new int[2*len] ;
+		
+		for(i=0;i<len;i++){
+			list[i]=list[i+len]=nums[i];
+		}
+		
+		printArray(nums);
+		printArray(list);
+		
+		for(i=jump;i<len+jump;i++){
+			nums[i-jump]=list[i];
+		}
+		
+		printArray(nums);
+		
+	}
 
 	/**
 	 * 打印一维数组
