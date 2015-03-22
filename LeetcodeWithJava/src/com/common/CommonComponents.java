@@ -20,5 +20,30 @@ public class CommonComponents {
 		return str;
 
 	}
+	
+	/**
+	 * 二分查找
+	 * @param num
+	 * @param start
+	 * @param end
+	 * @param target
+	 * @return
+	 */
+    public static int BinarySearch(int[]num,int start,int end,int target){
+    	if(num[start]>target || num[end]<target)
+    		return -1;
+    	
+    	int mid=(start+end)>>>1;
+    	if(num[mid]==target)
+    		return mid;
+    	else if(num[mid]>target){
+    		end=mid-1;
+    		return BinarySearch(num, start, end, target);
+    	}else{
+    		start=mid+1;
+    		return BinarySearch(num, start, end, target);
+    	}
+    	
+    }
 
 }
