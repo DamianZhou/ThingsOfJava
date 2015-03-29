@@ -20,7 +20,7 @@ public class CommonComponents {
 		return str;
 
 	}
-	
+
 	/**
 	 * 二分查找
 	 * @param num
@@ -29,21 +29,41 @@ public class CommonComponents {
 	 * @param target
 	 * @return
 	 */
-    public static int BinarySearch(int[]num,int start,int end,int target){
-    	if(num[start]>target || num[end]<target)
-    		return -1;
-    	
-    	int mid=(start+end)>>>1;
-    	if(num[mid]==target)
-    		return mid;
-    	else if(num[mid]>target){
-    		end=mid-1;
-    		return BinarySearch(num, start, end, target);
-    	}else{
-    		start=mid+1;
-    		return BinarySearch(num, start, end, target);
-    	}
-    	
-    }
+	public static int BinarySearch(int[]num,int start,int end,int target){
+		if(num[start]>target || num[end]<target)
+			return -1;
+
+		int mid=(start+end)>>>1;
+		if(num[mid]==target)
+			return mid;
+		else if(num[mid]>target){
+			end=mid-1;
+			return BinarySearch(num, start, end, target);
+		}else{
+			start=mid+1;
+			return BinarySearch(num, start, end, target);
+		}
+
+	}
+	/**
+	 * Definition for binary tree
+	 * 二叉树节点定义
+	 */
+	public static class TreeNode {
+		public int val;
+		public TreeNode left;
+		public TreeNode right;
+		public TreeNode(int x) { val = x; left=null;right=null;}
+	}
+	/**
+	 * 打印 树
+	 * @param root
+	 */
+	public static void printTree(TreeNode root){
+		if(root==null) return;
+		System.out.print(root.val+"-->");
+		printTree(root.left);
+		printTree(root.right);
+	}
 
 }
