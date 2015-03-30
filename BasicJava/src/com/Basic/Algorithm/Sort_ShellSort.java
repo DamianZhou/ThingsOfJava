@@ -1,14 +1,6 @@
 package com.Basic.Algorithm;
 
-public class Sort_ShellSort {
-
-	static void print(int a[], int n ,int i){  
-		System.out.print(i+":");
-		for(int j= 0; j<8; j++){  
-			System.out.print(a[j]+" ");
-		}  
-		System.out.println();
-	}  
+public class Sort_ShellSort extends CommonUtil{
 
 	/**
 	 * 在直接插入排序的基础上，添加了 步长dk
@@ -32,7 +24,7 @@ public class Sort_ShellSort {
 				}  
 				a[j+dk] = x;            //插入到正确位置  
 			}  
-			print(a, n,i );  
+			printArray(a, n,i );  
 		}  
 
 	}  
@@ -52,7 +44,7 @@ public class Sort_ShellSort {
 	public static void main(String[] args) {
 		int[] a = {3,1,5,7,2,4,9,6};  
 		shellSort(a,8);  
-		print(a,8,8);  
+		printArray(a,8,8);  
 	}
 
 }

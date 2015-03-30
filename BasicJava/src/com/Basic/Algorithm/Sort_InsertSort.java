@@ -1,9 +1,7 @@
 package com.Basic.Algorithm;
 
-public class Sort_InsertSort {
+public class Sort_InsertSort extends CommonUtil {
 	
-	static CommonOperation comOP = new CommonOperation();
-
 	static void InsertSort(int a[], int n)  
 	{  
 		for(int i= 1; i<n; i++){  
@@ -19,7 +17,7 @@ public class Sort_InsertSort {
 				}  
 				a[j+1] = x;      //插入到正确位置  
 			}  
-			comOP.print(a,n,i);           //打印每趟排序的结果  
+			printArray(a,n,i);           //打印每趟排序的结果  
 		}  
 
 	}  
@@ -27,7 +25,7 @@ public class Sort_InsertSort {
 	public static void main(String[] arsgs){  
 		int[] a = {3,1,5,7,2,4,9,6};  
 		InsertSort(a,8);  
-		comOP.print(a,8,8);  
+		printArray(a,8,8);  
 	} 
 
 }
