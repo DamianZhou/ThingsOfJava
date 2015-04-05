@@ -1,4 +1,4 @@
-package com.demo.struct;
+package DataStructure;
 
 /**
  * Java数组操作的demo

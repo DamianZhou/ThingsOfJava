@@ -1,5 +1,7 @@
 package com.medium;
 
+import com.common.ListNode;
+
 /**
  * Given a linked list, swap every two adjacent nodes and return its head.
  * 
@@ -69,16 +71,4 @@ public class P24_Swap_Nodes_in_Pairs {
 		printListNode(ln);
 	}
 
-}
-
-/*
- * Definition for singly-linked list.
- */
-class ListNode {
-	int val;
-	ListNode next;
-	ListNode(int x) {
-		val = x;
-		next = null;
-	}
 }

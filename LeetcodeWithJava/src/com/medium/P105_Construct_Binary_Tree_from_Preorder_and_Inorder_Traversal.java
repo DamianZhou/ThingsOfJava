@@ -71,7 +71,7 @@ public class P105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal exte
 
 		TreeNode ans = buildTree(preOrder, inOrder);
 
-		printPreOrder(ans);
+		printTree(ans);
 
 	}
 

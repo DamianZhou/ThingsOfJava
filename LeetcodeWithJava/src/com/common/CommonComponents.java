@@ -1,5 +1,10 @@
 package com.common;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+
 public class CommonComponents {
 
 	/**
@@ -64,6 +69,52 @@ public class CommonComponents {
 		System.out.print(root.val+"-->");
 		printTree(root.left);
 		printTree(root.right);
+	}
+
+	/**
+	 * 获得一棵树
+	 * @return
+	 */
+	public static TreeNode getTree(){
+		TreeNode root = new TreeNode(3);
+		TreeNode c9 = new TreeNode(9);
+		TreeNode c20 = new TreeNode(20);
+		TreeNode c15 = new TreeNode(15);
+		TreeNode c7 = new TreeNode(7);
+
+		root.left=c9;
+		root.right=c20;
+		c20.left=c15;
+		c20.right=c7;
+
+		return root;
+	}
+
+	/**
+	 * 以行为单位读取文件，常用于读面向行的格式化文件
+	 */
+	public static void readFileByLines(String fileName) {
+		File file = new File(fileName);
+		BufferedReader reader = null;
+		try {
+			reader = new BufferedReader(new FileReader(file));
+			String tempString = null;
+			int line = 1;
+			while ((tempString = reader.readLine()) != null) {	 // 一次读入一行，直到读入null为文件结束
+				System.out.println("line " + line + ": " + tempString);  // 显示行号
+				line++;
+			}
+			reader.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (reader != null) {
+				try {
+					reader.close(); //关闭文件
+				} catch (IOException e1) {
+				}
+			}
+		}
 	}
 
 }

@@ -1,6 +1,9 @@
 package com.medium;
 
 import java.util.ArrayList;
+import java.util.Collections;
+
+import sun.misc.Compare;
 
 /**
  * 
@@ -24,7 +27,10 @@ public class P120_Triangle {
 			triangle.get(i).set(len-1, triangle.get(i).get(len-1)+triangle.get(i-1).get(len-2));//最后一个元素
 		}
 
-		triangle.get(triangle.size()-1).sort(null);
+		//triangle.get(triangle.size()-1).sort(null); 	//不同版本的JDK支持不同
+		
+		Collections.sort(triangle.get( triangle.size()-1 ));		//通用排序，默认递增
+				
 		return triangle.get(triangle.size()-1).get(0);   
 	}
 	public static void main(String[] args) {

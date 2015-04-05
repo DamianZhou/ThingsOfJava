@@ -80,12 +80,43 @@ public class P33_Search_in_Rotated_Sorted_Array {
     	
     }
     
-    
+    /**
+     * 参考
+     * @param A
+     * @param target
+     * @return
+     * @see https://leetcode.com/discuss/22678/revised-binary-search
+     */
+    public static  int search1(int[] A, int target) {
+        int lo = 0;
+        int hi = A.length - 1;
+        while (lo < hi) {
+            int mid = (lo + hi) / 2;
+            System.out.println("--------mid="+A[mid]);
+            if (A[mid] == target) return mid;
+
+            if (A[lo] <= A[mid]) {
+                if (target >= A[lo] && target < A[mid]) {
+                    hi = mid - 1;
+                } else {
+                    lo = mid + 1;
+                }
+            } else {
+                if (target > A[mid] && target <= A[hi]) {
+                    lo = mid + 1;
+                } else {
+                    hi = mid - 1;
+                }
+            }
+        }
+        System.out.println("--------lo="+A[lo]);
+        return A[lo] == target ? lo : -1;
+    }
 	public static void main(String[] args) {
 		int[] num1={1,3,5,6};
-		int[] num2={11,14,15,26,1,3,5,6,7,9,10};
+		int[] num2={11,14,14,15,26,26,1,3,5,6,7,9,10};
 
-		System.out.println(search(num2,8));
+		System.out.println(search1(num2,14));
 		System.out.println("---------------------");
 	}
 
