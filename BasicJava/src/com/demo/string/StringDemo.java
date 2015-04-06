@@ -19,7 +19,15 @@ public class StringDemo {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		StringBuilder str = new StringBuilder("world!");
+		
+		str.insert(0, "hello ");
+		
+		System.out.println(str.toString());
+		
+		str.replace(0, 6, "");
+		
+		System.out.println(str.toString());
 
 	}
 

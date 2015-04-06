@@ -18,6 +18,7 @@ public class P61_Rotate_List {
     		tail=temp;
     		temp=temp.next;
     	}
+    	if(count==0) return head;
     	k=count-k%count;
     	
     	ListNode pre=null;
