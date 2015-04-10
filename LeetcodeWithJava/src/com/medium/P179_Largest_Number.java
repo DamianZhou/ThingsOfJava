@@ -25,6 +25,7 @@ public class P179_Largest_Number {
 
 	/**
 	 * 比较两个数的“作用”大小
+	 * 直接比较两个字符串拼接以后的大小情况
 	 * @param s1
 	 * @param s2
 	 * @return

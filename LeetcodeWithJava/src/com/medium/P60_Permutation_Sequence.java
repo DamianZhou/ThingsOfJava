@@ -1,6 +1,7 @@
 package com.medium;
 
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  * 
@@ -50,6 +51,26 @@ public class P60_Permutation_Sequence {
 
 		return str.toString();
 	}
+
+	/**
+	 * @see https://leetcode.com/discuss/16064/an-iterative-solution-for-reference
+	 */
+	public String getPermutation_ref(int n, int k) {
+        List<Integer> num = new LinkedList<Integer>();
+        for (int i = 1; i <= n; i++) num.add(i);
+        int[] fact = new int[n];  // factorial
+        fact[0] = 1;
+        for (int i = 1; i < n; i++) fact[i] = i*fact[i-1];
+        k = k-1;
+        StringBuilder sb = new StringBuilder();
+        for (int i = n; i > 0; i--){
+            int ind = k/fact[i-1];
+            k = k%fact[i-1];
+            sb.append(num.get(ind));
+            num.remove(ind);
+        }
+        return sb.toString();
+    }
 	public static void main(String[] args) {
 		getPermutation(3,1);
 		getPermutation(3,2);

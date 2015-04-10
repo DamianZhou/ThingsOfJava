@@ -17,6 +17,10 @@ public class Test {
 		BigDecimal bd = new BigDecimal("1.8485E8");
 		System.out.println(bd.divide(BigDecimal.valueOf(1000000)));
 		
+		String str = "SH124665,2014-11-05_00:00:00,2,1.787,0.000,1.787,21.440,107.2,107.2,107.2,107.2,1000,1072000.0,107.2";
+		
+		System.out.println(str.split(",")[0]);
+		
 	}
 
 }
