@@ -37,6 +37,15 @@ public class TestBitOperation {
 		System.out.println("d >> 2 = " + c );  
 		
 		c = d >>> 2;     	/* 右移：15 = 0000 1111 */      
-		System.out.println("d >>> 2 = " + c );   
+		System.out.println("d >>> 2 = " + c );
+		
+		
+		System.out.println(-4>>2 );
+		System.out.println(-4>>>2 );
+		System.out.println(Integer.toBinaryString(-1));
+		System.out.println(Integer.toBinaryString(-7));
+		System.out.println(Integer.toBinaryString(-15));
+		System.out.println(Integer.toBinaryString(-15>>1));		//左边补1
+		System.out.println(Integer.toBinaryString(-15>>>1));	//左边补0
 	}
 }

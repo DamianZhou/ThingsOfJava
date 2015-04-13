@@ -1,8 +1,15 @@
 package Basic;
 
 import java.math.BigDecimal;
+import java.util.Arrays;
 
 public class Test {
+	
+	private static void  testArray(){
+		int[] num = {1,2,3,4,6,9,7};
+		Arrays.sort(num);
+		System.out.println(Arrays.toString(num));
+	}
 
 	public static void main(String[] args) {
 
@@ -20,6 +27,11 @@ public class Test {
 		String str = "SH124665,2014-11-05_00:00:00,2,1.787,0.000,1.787,21.440,107.2,107.2,107.2,107.2,1000,1072000.0,107.2";
 		
 		System.out.println(str.split(",")[0]);
+		
+		testArray();
+		
+		
+		
 		
 	}
 
