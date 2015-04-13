@@ -1,6 +1,5 @@
 package jiuduOJ;
 
-import java.util.PriorityQueue;
 import java.util.Scanner;
 
 /**
@@ -20,11 +19,12 @@ public class P1388_JumpFloor {
 	}
 	public static void main(String[] args) {
 
-				System.out.println(getWays(3));
-//		Scanner in = new Scanner(System.in);
-//		int n=in.nextInt();
-//		System.out.println(getWays(n));	
-
+		Scanner in = new Scanner(System.in);
+		int n;
+		while(in.hasNext()){
+			n=in.nextInt();
+			System.out.println(getWays(n));	
+		}
 	}
 
 }
