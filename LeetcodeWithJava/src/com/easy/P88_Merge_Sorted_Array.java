@@ -2,8 +2,6 @@ package com.easy;
 
 import java.util.Arrays;
 
-import com.sun.scenario.effect.Merge;
-
 /**
  * 
  * @author Damian
