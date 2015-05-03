@@ -1,5 +1,7 @@
 package com.easy;
 
+import java.util.Arrays;
+
 /**
  * Rotate an array of n elements to the right by k steps.
  * 向右循环移动 k步
@@ -17,14 +19,48 @@ package com.easy;
  * @see https://leetcode.com/problems/rotate-array/
  */
 public class P189_Rotate_Array {
+	
+	/**
+	 * 2015/4/17
+	 * O(1) 空间( 实际未使用！)
+	 * 翻转数组
+	 * @param nums
+	 * @param k
+	 * @see http://blog.csdn.net/lanceleng/article/details/8707168
+	 */
+	public static void rotate_ref(int[] nums, int k){
+		k=k%nums.length;
+		if(k==0) return;
+		reverseArray(nums, 0, nums.length-1-k);
+//		System.out.println(Arrays.toString(nums) );
+		reverseArray(nums, nums.length-k, nums.length-1);
+//		System.out.println(Arrays.toString(nums) );
+		reverseArray(nums, 0, nums.length-1);
+//		System.out.println(Arrays.toString(nums) );
+	}
+	
+	private static void reverseArray(int[] nums,int start,int end){
+		while(start<end){
+			nums[start]=nums[start]^nums[end];
+			nums[end]=nums[start]^nums[end];
+			nums[start]=nums[start]^nums[end];
+			
+			end--;
+			start++;
+		}
+	}
 
 	public static void main(String[] args) {
 
-//		int[] nums = {1,2,3,4,5,6,7,8,9};
-		int[] nums={1,2,3,4,5,6,7}; 
+		int[] nums = {1,2,3,4,5,6,7,8,9};
+		int[] nums1={1,2,3,4,5,6,7}; 
 
-		rotate3(nums,3);
-
+		int[] nums2={1,2,3};
+ 		
+		rotate_ref(nums2,1);
+//		rotate4(nums,1);
+//		rotate4(nums,2);
+//		rotate_ref(nums,8);
 
 	}
 
@@ -99,7 +135,7 @@ public class P189_Rotate_Array {
 	}
 
 	/**
-	 * 打印一维数组
+	 * 打印一维数组 Arrays.toString();
 	 * @param nums
 	 */
 	public static void printArray(int[] nums){

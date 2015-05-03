@@ -10,12 +10,20 @@ import java.util.ArrayList;
 public class P201_Bitwise_AND_of_Numbers_Range {
 	
 	/**
+	 * 2015/04/30
 	 * @param m
 	 * @param n
 	 * @return
 	 */
 	public static int rangeBitwiseAnd(int m, int n) {
-		return n;
+		int count=0;
+		while(m!=n && m!=0){
+			m=m>>1;
+			n= n>>1;
+			count++;
+		}
+		
+		return n<<count;
 		
 	}
 	
@@ -59,11 +67,13 @@ public class P201_Bitwise_AND_of_Numbers_Range {
 	    }
 	    return n<<c;
 	}
+	
 	public static void main(String[] args) {
-		int result = rangeBitwiseAnd_ref(2147483647,Integer.MAX_VALUE);
-		System.out.println(result);
+//		int result = rangeBitwiseAnd_ref(2147483647,Integer.MAX_VALUE);
+//		System.out.println(result);
 		
-//		System.out.println(Integer.MAX_VALUE-1 & Integer.MAX_VALUE);
+		P201_Bitwise_AND_of_Numbers_Range test = new P201_Bitwise_AND_of_Numbers_Range();
+		System.out.println(test.rangeBitwiseAnd(8, 10));
 
 	}
 

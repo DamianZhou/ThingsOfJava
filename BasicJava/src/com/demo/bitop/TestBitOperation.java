@@ -45,6 +45,7 @@ public class TestBitOperation {
 		System.out.println(Integer.toBinaryString(-1));
 		System.out.println(Integer.toBinaryString(-7));
 		System.out.println(Integer.toBinaryString(-15));
+		System.out.println(Integer.toBinaryString(15>>1));		//左边补0
 		System.out.println(Integer.toBinaryString(-15>>1));		//左边补1
 		System.out.println(Integer.toBinaryString(-15>>>1));	//左边补0
 	}
