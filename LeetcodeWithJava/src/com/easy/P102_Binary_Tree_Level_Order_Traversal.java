@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import com.common.CommonComponents;
-import com.common.CommonComponents.TreeNode;
+import com.common.TreeNode;
 
 /**
  * 二叉树按层遍历

@@ -1,7 +1,7 @@
 package com.medium;
 
 import com.common.CommonComponents;
-import com.common.CommonComponents.TreeNode;
+import com.common.TreeNode;
 
 /**
  * 

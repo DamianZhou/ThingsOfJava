@@ -3,6 +3,7 @@ package com.medium;
 import java.util.Stack;
 
 import com.common.CommonComponents;
+import com.common.TreeNode;
 
 
 /**
@@ -19,7 +20,7 @@ import com.common.CommonComponents;
  * @author Damian
  * @see https://leetcode.com/problems/validate-binary-search-tree/
  */
-public class P98_Validate_Binary_Search_Tree extends CommonComponents {
+public class P098_Validate_Binary_Search_Tree extends CommonComponents {
 
 	public static boolean isValidBST(TreeNode root) {
 		if(root==null) 

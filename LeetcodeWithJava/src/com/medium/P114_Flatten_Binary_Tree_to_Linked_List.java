@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import sun.misc.Queue;
 
 import com.common.CommonComponents;
-import com.common.CommonComponents.TreeNode;
+import com.common.TreeNode;
 
 
 /**
@@ -34,7 +34,7 @@ The flattened tree should look like:
  * @author Damian
  * @see https://leetcode.com/problems/flatten-binary-tree-to-linked-list/
  */
-public class P114_Flatten_Binary_Tree_to_Linked_List extends CommonComponents {
+public class P114_Flatten_Binary_Tree_to_Linked_List {
 
 	static LinkedList<TreeNode> nodelist = new LinkedList<TreeNode>();
 
@@ -106,11 +106,11 @@ public class P114_Flatten_Binary_Tree_to_Linked_List extends CommonComponents {
 		n2.right=n4;
 		n5.right=n6;
 
-		printTree(n1);
+		CommonComponents.printTree(n1);
 		flatten(n1);
 
 		System.out.println();
-		printTree(n1);
+		CommonComponents.printTree(n1);
 	}
 
 }

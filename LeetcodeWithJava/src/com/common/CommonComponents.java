@@ -51,16 +51,6 @@ public class CommonComponents {
 
 	}
 	/**
-	 * Definition for binary tree
-	 * 二叉树节点定义
-	 */
-	public static class TreeNode {
-		public int val;
-		public TreeNode left;
-		public TreeNode right;
-		public TreeNode(int x) { val = x; left=null;right=null;}
-	}
-	/**
 	 * 打印 树
 	 * @param root
 	 */
@@ -86,6 +76,29 @@ public class CommonComponents {
 		root.right=c20;
 		c20.left=c15;
 		c20.right=c7;
+
+		return root;
+	}
+	
+	public static TreeNode getBSTree(){
+		TreeNode root = new TreeNode(10);
+		TreeNode c5 = new TreeNode(5);
+		TreeNode c15 = new TreeNode(15);
+		TreeNode c3 = new TreeNode(3);
+		TreeNode c7 = new TreeNode(7);
+		TreeNode c13 = new TreeNode(13);
+		TreeNode c19 = new TreeNode(19);
+		TreeNode c6 = new TreeNode(6);
+		TreeNode c9 = new TreeNode(9);
+
+		root.left=c5;
+		root.right=c15;
+		c5.left=c3;
+		c5.right=c7;
+		c15.left=c13;
+		c15.right=c19;
+		c7.left=c6;
+		c7.right=c9;
 
 		return root;
 	}
