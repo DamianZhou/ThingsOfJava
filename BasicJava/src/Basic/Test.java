@@ -2,6 +2,7 @@ package Basic;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
+import java.util.Date;
 
 public class Test {
 	
@@ -29,6 +30,10 @@ public class Test {
 		System.out.println(str.split(",")[0]);
 		
 		testArray();
+		
+		System.out.println((new Date()).toString());
+		System.out.println((new Date()).toLocaleString());
+		System.out.println((new Date()).toGMTString());
 		
 		
 		

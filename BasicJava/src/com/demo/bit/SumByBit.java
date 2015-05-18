@@ -1,4 +1,4 @@
-package com.demo.bitop;
+package com.demo.bit;
 
 /**
  * 参考剑指offer 47：不使用“+”实现加法运算

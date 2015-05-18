@@ -1,4 +1,4 @@
-package com.demo.bitop;
+package com.demo.bit;
 
 /**
  * 位操作demo
