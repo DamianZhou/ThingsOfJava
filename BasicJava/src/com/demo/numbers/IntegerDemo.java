@@ -1,5 +1,7 @@
 package com.demo.numbers;
 
+import java.util.Arrays;
+
 public class IntegerDemo {
 	
 	static void change(int a,int b,Integer c,String s,int[] num){
@@ -23,12 +25,13 @@ public class IntegerDemo {
 		
 		String s="23445";
 		
-		System.out.print(a+", "+b+", "+c+", "+num.toString());
+		System.out.print(a+", "+b+", "+c+", "+Arrays.toString(num));
 		
 		change(a,b,c,s,num);
 		
-		System.out.print("\n"+a+", "+b+", "+c+", "+num.toString());
+		System.out.print("\n"+a+", "+b+", "+c+", "+Arrays.toString(num));
 		
+		//-----------------------------------------------
 
 	}
 
