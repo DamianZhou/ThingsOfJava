@@ -29,7 +29,7 @@ public class P004_median_of_two_sorted_arrays {
 		return low;
 	}
 	/**
-	 * 查找第K个
+	 * 查找第K小的数
 	 * @param a
 	 * @param m
 	 * @param b
@@ -97,6 +97,12 @@ public class P004_median_of_two_sorted_arrays {
 		}
 	}
 
+	/**
+	 * 
+	 * @param A
+	 * @param B
+	 * @return
+	 */
 	public static double findMedianSortedArrays(int A[], int B[]) {
 		int k= A.length+B.length;
 		if((k&1)==1){
@@ -107,6 +113,53 @@ public class P004_median_of_two_sorted_arrays {
 		}
 	}
 
+
+
+	//----------------------------------------------------
+
+	/**
+	 * 
+	 * @param nums1
+	 * @param nums2
+	 * @return
+	 * @see http://www.acmerblog.com/leetcode-median-of-two-sorted-arrays-5330.html
+	 */
+	public double findMedianSortedArrays_ref(int[] nums1, int[] nums2) {
+
+		return 0;
+	}
+
+	/**
+	 * 查找第k小的数
+	 * @param nums1
+	 * @param m
+	 * @param nums2
+	 * @param n
+	 * @param k
+	 * @return
+	 */
+	double findKth(int[] nums1, int m , int[] nums2,int n,int k){
+		//always assume that m is equal or smaller than n
+		if (m > n)
+			return findKth(nums2, n, nums1, m, k);
+
+		if (m == 0)
+			return nums2[k - 1];
+
+		if (k == 1)
+			return Math.min(nums1[0], nums2[0]);
+
+		//divide k into two parts
+//		int pa = Math.min(k / 2, m), pb = k - pa;
+//		if (nums1[pa - 1] < nums2[pb - 1])
+//			return findKth(nums1 + pa, m - pa, b, n, k - pa);
+//		else if (nums1[pa - 1] > nums2[pb - 1])
+//			return findKth(a, m, b + pb, n - pb, k - pb);
+//		else
+//			return nums1[pa - 1];
+		
+		return 0;
+	}
 
 
 	public static void main(String[] args) {

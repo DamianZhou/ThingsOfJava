@@ -16,9 +16,28 @@ public class NumberOf1 {
         }
         return count;
     }
+    
+    //---------------------------------------
+    
+    public static int getNumberOf1_ref(int n) {
+    	int count = 0 ;
+    	while(n!=0){
+    		
+    		System.out.println("n   = "+Integer.toBinaryString(n));
+    		
+    		count++;
+    		 n = (n-1)&n; //去除最右的1
+    	}
+    	return count;
+    }
+    
+    
 	public static void main(String[] args) {
 		int n=15;
-		System.out.println(getNumberOf1(n));
+		
+		System.out.println(getNumberOf1_ref(n));
+		System.out.println(getNumberOf1_ref(188));
+		System.out.println(getNumberOf1_ref(-2));
 	}
 
 }
