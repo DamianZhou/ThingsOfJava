@@ -11,7 +11,7 @@ import java.util.List;
  * @author DamianZhou
  * @see https://leetcode.com/problems/generate-parentheses/
  */
-public class P22_Generate_Parentheses {
+public class P022_Generate_Parentheses {
 
 	/**
 	 * 最原始的方法，替换String，使用HashSet保存结果
