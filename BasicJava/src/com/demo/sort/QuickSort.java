@@ -45,8 +45,9 @@ public class QuickSort {
 	}
 	
 	public static void main(String[] args){
-		int[] num = {7,5,4,1,54,69,9,23};
+		int[] num = {7,5};
 		System.out.println(Arrays.toString(num));
-		quicksort(num, 0, num.length-1);
+		partition(num, 0, num.length-1);
+		System.out.println(Arrays.toString(num));
 	}
 }
