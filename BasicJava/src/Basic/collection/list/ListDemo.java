@@ -25,6 +25,23 @@ public class ListDemo {
 		System.out.println("cl==el ? "+cl.equals(el));
 		
 	}
+	
+	
+	void checkList(){
+		int size = 20;
+		ArrayList<Integer> list = new ArrayList<Integer>(50);
+		list.ensureCapacity(size); //最小的初始容量
+		for(int i=0;i<20;i++)
+			list.add(i);
+		list.trimToSize();//调整ArrayList的大小到当前size (确保不再调整后调用)
+		
+		//将list转换为数组
+		Integer[] nums = new Integer[list.size()];
+		list.toArray(nums);
+		
+	}
+	
+	
 
 	public static void main(String[] args) {
 		ListDemo test = new ListDemo();

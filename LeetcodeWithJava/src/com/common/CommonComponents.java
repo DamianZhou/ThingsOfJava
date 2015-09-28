@@ -71,14 +71,38 @@ public class CommonComponents {
 		TreeNode c20 = new TreeNode(20);
 		TreeNode c15 = new TreeNode(15);
 		TreeNode c7 = new TreeNode(7);
+		TreeNode c77 = new TreeNode(77);
+		TreeNode c88 = new TreeNode(88);
+		TreeNode cbig = new TreeNode(100000000);
 
 		root.left=c9;
 		root.right=c20;
 		c20.left=c15;
 		c20.right=c7;
-
+		c7.left=c77;
+		c7.right=c88;
+		c88.left=cbig;
+		
 		return root;
 	}
+	
+    /**
+     * 获得一个链表
+     * @return
+     */
+    public static ListNode getList(){
+        ListNode root = new ListNode(3);
+        ListNode c9 = new ListNode(9);
+        ListNode c20 = new ListNode(20);
+        ListNode c15 = new ListNode(15);
+        ListNode c7 = new ListNode(7);
+
+        root.next=c9;
+        c9.next=c20;
+        c20.next=c15;
+        c15.next=c7;
+        return root;
+    }
 	
 	public static TreeNode getBSTree(){
 		TreeNode root = new TreeNode(10);

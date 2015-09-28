@@ -13,11 +13,19 @@ public class IntegerDemo {
 		
 //		System.out.println(  );
 	}
+	
+	
+	void check_basic_Binary(){
+		System.out.println( Integer.toBinaryString( Integer.MAX_VALUE ) );  // 01111111111111111111111111111111
+		System.out.println( Integer.toBinaryString( 3 ) ); 									// 00000000000000000000000000000011
+		System.out.println( Integer.toBinaryString( -3 ) );									// 11111111111111111111111111111101   补码的形式
+	}
 
 	public static void main(String[] args) {
 		IntegerDemo test = new IntegerDemo();
 		
-		test.testFunctions();
+//		test.testFunctions();
+		test.check_basic_Binary();
 
 	}
 

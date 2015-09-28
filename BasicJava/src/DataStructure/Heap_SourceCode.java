@@ -7,7 +7,7 @@ import java.util.*;
  * Java中有 PriorityQueue 来实现堆操作。
  * @author Arthur 
  */   
-public class Heap {   
+public class Heap_SourceCode {   
 
 	/** 
 	 * 删除堆中位置是index处的值 
