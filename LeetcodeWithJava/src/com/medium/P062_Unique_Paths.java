@@ -5,7 +5,7 @@ package com.medium;
  * @author Damian
  * @see https://leetcode.com/problems/unique-paths/
  */
-public class P62_Unique_Paths {
+public class P062_Unique_Paths {
 
     public static int uniquePaths(int m, int n) {
         
