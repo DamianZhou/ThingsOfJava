@@ -14,7 +14,7 @@ import sun.security.action.GetLongAction;
  * @author DamianZhou
  * @see https://leetcode.com/problems/permutations/
  */
-public class P46_Permutations {
+public class P046_Permutations {
 
 	/**
 	 * 2015/04/25 参考 剑指offer

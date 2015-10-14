@@ -15,7 +15,7 @@ package com.easy;
  * @author DamianZhou
  * @see https://leetcode.com/problems/string-to-integer-atoi/
  */
-public class P8_String_to_Integer {
+public class P008_String_to_Integer {
 
 	/**
 	 * 想多了...只有第一个正负号是有效字符，后面的+/-都算无效字符

@@ -23,12 +23,14 @@ public class QuickSort {
 			if(left<right){
 				nums[temp_pos]=nums[right];
 				temp_pos=right;
+				left++;
 			}
 			while(nums[left]<base && left<right)
 					left++;
 			if(left<right){
 				nums[temp_pos]=nums[left];
 				temp_pos=left;
+				right--;
 			}
 			
 		}		
